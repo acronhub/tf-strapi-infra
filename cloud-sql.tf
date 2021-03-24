@@ -27,7 +27,7 @@ resource "google_sql_database_instance" "strapi" {
 
 resource "google_sql_database" "strapi" {
   name      = "strapi"
-  instance  = "${google_sql_database_instance.strapi.name}"
+  instance  = google_sql_database_instance.strapi.name
   charset   = "utf8mb4"
   collation = "utf8mb4_general_ci"
 }

@@ -30,3 +30,10 @@ resource "google_project_service" "cloud-logging" {
   disable_dependent_services = true
 }
 
+# Identity and Access Management (IAM) API API
+resource "google_project_service" "iam" {
+  project = var.project_name
+  service = "iam.googleapis.com"
+
+  disable_dependent_services = true
+}
