@@ -21,3 +21,12 @@ resource "google_project_service" "compute-engine" {
 
   disable_dependent_services = true
 }
+
+# Cloud Logging API
+resource "google_project_service" "cloud-logging" {
+  project = var.project_name
+  service = "logging.googleapis.com"
+
+  disable_dependent_services = true
+}
+
