@@ -13,3 +13,11 @@ resource "google_project_service" "cloud-sql" {
 
   disable_dependent_services = true
 }
+
+# Compute Engine API
+resource "google_project_service" "compute-engine" {
+  project = var.project_name
+  service = "compute.googleapis.com"
+
+  disable_dependent_services = true
+}

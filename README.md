@@ -2,6 +2,10 @@
 
 GCPに環境を構築
 
+- API Service
+- Cloud SQL
+- Cloud Storage
+
 ## 必要環境
 
 - [Docker](https://www.docker.com/docker-mac) をインストール済み
