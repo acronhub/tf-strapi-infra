@@ -15,6 +15,11 @@ GCPに環境を構築
   - 「キータイプ」はJSONのままにします
   - 「作成」をクリックしてキーを作成し、キーファイルをシステムに保存します
 
+- APIを有効
+  - [APIとサービス]で、[ライブラリ]を選択します
+  - [cloudresourcemanager.googleapis.com]で検索します
+  - [有効にする]をクリックして有効にします
+
 - GCP 環境を設定
   ```BASH
   cp -a .env.example .env

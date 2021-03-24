@@ -14,8 +14,8 @@ terraform {
 }
 
 provider "google" {
-  project     = var.project_name
-  region      = var.region
+  project = var.project_name
+  region  = var.region
 }
 
 resource "google_storage_bucket" "tf-state-store" {
