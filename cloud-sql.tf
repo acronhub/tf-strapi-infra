@@ -25,9 +25,24 @@ resource "google_sql_database_instance" "strapi" {
   }
 }
 
+# DB作成
 resource "google_sql_database" "strapi" {
   name      = "strapi"
   instance  = google_sql_database_instance.strapi.name
   charset   = "utf8mb4"
   collation = "utf8mb4_general_ci"
 }
+
+# DBユーザ作成
+resource "random_password" "strapi-password" {
+  length           = 16
+  special          = true
+  override_special = "_%@"
+}
+
+resource "google_sql_user" "strapi" {
+  name     = "strapi"
+  instance = google_sql_database_instance.strapi.name
+  password = random_password.strapi-password.result
+}
+

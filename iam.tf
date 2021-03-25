@@ -36,6 +36,3 @@ resource "google_service_account_key" "github-actions" {
   service_account_id = google_service_account.github-actions.name
   public_key_type = "TYPE_X509_PEM_FILE"
 }
-output "github-actions-private_key" {
-  value = google_service_account_key.github-actions.private_key
-}
