@@ -42,6 +42,7 @@ resource "random_password" "strapi-password" {
 
 resource "google_sql_user" "strapi" {
   name     = "strapi"
+  host     = "%"
   instance = google_sql_database_instance.strapi.name
   password = random_password.strapi-password.result
 }

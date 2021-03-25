@@ -13,6 +13,9 @@ output "GCP_SA_EMAIL" {
 output "GCP_SA_KEY" {
   value = google_service_account_key.github-actions.private_key
 }
+output "GCP_CLOUDSQL_SA" {
+  value = google_service_account.cloudsql-client.email
+}
 
 # CloudSQL情報
 output "GCP_CLOUDSQL_INSTANCES" {
