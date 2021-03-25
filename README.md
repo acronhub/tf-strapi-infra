@@ -3,6 +3,7 @@
 GCPに環境を構築
 
 - API Service
+- IAM
 - Cloud SQL
 - Cloud Storage
 
