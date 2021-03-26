@@ -1,13 +1,17 @@
-# CloudSQLクライアント サービスアカウント
-resource "google_service_account" "cloudsql-client" {
-  account_id   = "cloudsql-client"
-  display_name = "cloudsql-client"
-  description  = "CloudSQLクライアント"
+# CloudRun サービスアカウント
+resource "google_service_account" "cloud-run-sa" {
+  account_id   = "cloud-run-sa"
+  display_name = "cloud-run-sa"
+  description  = "CloudSQLクライアント,Storage管理者"
 }
 
-resource "google_project_iam_member" "cloudsql-client" {
+resource "google_project_iam_member" "cloud-run-sa-cloudsql" {
   role   = "roles/cloudsql.client"
-  member = "serviceAccount:${google_service_account.cloudsql-client.email}"
+  member = "serviceAccount:${google_service_account.cloud-run-sa.email}"
+}
+resource "google_project_iam_member" "cloud-run-sa-storage" {
+  role   = "roles/storage.admin"
+  member = "serviceAccount:${google_service_account.cloud-run-sa.email}"
 }
 
 

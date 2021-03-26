@@ -13,8 +13,8 @@ output "GCP_SA_EMAIL" {
 output "GCP_SA_KEY" {
   value = google_service_account_key.github-actions.private_key
 }
-output "GCP_CLOUDSQL_SA" {
-  value = google_service_account.cloudsql-client.email
+output "GCP_CLOUDRUN_SA" {
+  value = google_service_account.cloud-run-sa.email
 }
 
 # CloudSQL情報
