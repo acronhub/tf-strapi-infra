@@ -31,3 +31,7 @@ output "GCP_DATABASE_PASSWORD" {
   value = google_sql_user.strapi.password
 }
 
+# CloudStorage情報
+output "GCP_BUCKET_NAME" {
+  value = google_storage_bucket.strapi.name
+}
