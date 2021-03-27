@@ -10,6 +10,8 @@ GCPに環境を構築
 ## 必要環境
 
 - [Docker](https://www.docker.com/docker-mac) をインストール済み
+- ドメインを取得済み
+  - ウェブマスターセントラル(https://www.google.com/webmasters/verification/home?hl=ja) にドメイン所有者登録済み
 
 ## 事前準備
 

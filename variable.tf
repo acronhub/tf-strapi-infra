@@ -15,3 +15,9 @@ variable "credential" {
   default = "<your-credential-path>"
   description = "GCP サービスアカウントJSONファイル"
 }
+
+variable "domain" {
+  type    = string
+  default = "<your-domain>"
+  description = " 取得しているドメイン"
+}
