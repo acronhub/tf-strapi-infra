@@ -9,7 +9,7 @@ terraform {
   # GCSの作成前はコメントアウト
   # ※環境変数が使えないので直接書く
   backend "gcs" {
-    bucket  = "tf-office-shiratama-corp-state-store"
+    bucket  = "tf-xxxxx-state-store"
   }
 }
 
